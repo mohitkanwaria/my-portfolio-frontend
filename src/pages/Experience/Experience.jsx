@@ -94,7 +94,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await axios.get(`${API}/experience`);
+        const response = await axios.get(`${API}/api/experience`);
         setExperiences(response.data);
         setIsVisible(new Array(response.data.length).fill(false));
       } catch (error) {

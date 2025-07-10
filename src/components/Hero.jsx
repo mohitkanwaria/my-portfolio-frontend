@@ -75,7 +75,7 @@ const Hero = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get(`${API}/profile`);
+        const res = await axios.get(`${API}/api/profile`);
         setProfile(res.data);
       } catch (error) {
         console.error('❌ Failed to fetch profile:', error);

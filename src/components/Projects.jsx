@@ -110,7 +110,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get(`${API}/projects`)
+      .get(`${API}/api/projects`)
       .then((res) => {
         setProjects(res.data);
       })

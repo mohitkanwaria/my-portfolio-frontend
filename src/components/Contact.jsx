@@ -148,7 +148,7 @@ const Contact = () => {
   // Fetch contact-info on mount
   useEffect(() => {
     axios
-      .get(`${API}/contact-info`)
+      .get(`${API}/api/contact-info`)
       .then((res) => setContactInfo(res.data))
       .catch((err) =>
         console.error("Failed to fetch contact-info:", err)
@@ -167,7 +167,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${API}/contact`,
+        `${API}/api/contact`,
         formData
       );
       if (response.data.success) {

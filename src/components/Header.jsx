@@ -107,7 +107,7 @@ const Header = () => {
     // Fetch header name from API
     const fetchName = async () => {
       try {
-        const res = await axios.get(`${API}/header`);
+        const res = await axios.get(`${API}/api/header`);
         if (res.data?.name) {
           setName(res.data.name);
         }

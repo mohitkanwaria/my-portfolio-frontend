@@ -108,7 +108,7 @@ const About = () => {
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const response = await axios.get(`${API}/about`);
+        const response = await axios.get(`${API}/api/about`);
         setAbout(response.data);
       } catch (error) {
         console.error("Failed to fetch About Me data:", error);

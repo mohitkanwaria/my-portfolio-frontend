@@ -47,7 +47,7 @@ const Blog = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get(`${API}/blogs`);
+      const res = await axios.get(`${API}/api/blogs`);
       setBlogs(res.data);
     } catch (err) {
       console.error("Error fetching blogs:", err);
@@ -69,7 +69,7 @@ const Blog = () => {
 
   const handleAddBlog = async () => {
     try {
-      const res = await axios.post(`${API}/blogs`, formData);
+      const res = await axios.post(`${API}/api/blogs`, formData);
       alert(`✅ Blog added: ${res.data.title}`);
       setFormData({ title: "", slug: "", content: "", excerpt: "" });
       setShowModal(false);

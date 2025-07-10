@@ -100,7 +100,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const res = await axios.get(`${API}/skills`);
+        const res = await axios.get(`${API}/api/skills`);
         const sorted = res.data.sort((a, b) => a.id - b.id); // Optional: Sort categories
         setSkillsData(sorted);
         setIsVisible(new Array(sorted.length).fill(false));

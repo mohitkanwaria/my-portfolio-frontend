@@ -27,7 +27,7 @@ const Footer = () => {
   useEffect(() => {
     const fetchFooter = async () => {
       try {
-        const response = await axios.get(`${API}/footer`);
+        const response = await axios.get(`${API}/api/footer`);
         setFooterData(response.data);
       } catch (error) {
         console.error('Failed to fetch footer:', error);
